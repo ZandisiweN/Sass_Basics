@@ -1,0 +1,47 @@
+What is Sass, and why do we need it?
+
+CSS extension language, Sass is css on steroids/ css with superpowers
+-It a language that basically extends css to give extra features and superpowers that make writing styles easier, more flexible and more reusable.
+- Now it does this by bringing typical programing constacts like functions, loops, variables and inheritance into css.
+
+
+
+Note
+
+Browsers don't understand raw sass files, we just can't hook up sass files to our html pages just like you would css files and expect it to work, it won't. We need to compile sass into plain css before it works in a browers.
+
+We can do this in many ways, -- We can use node js to run a compiler that will watch our sass files and compile them automatically for us. We can use gulp to use the same thing
+
+npm init - creates a package.json file and it keeps track of all our project dependancies / the packages we are about to install
+
+Variables - variables are used to store and reuse values throughout your stylesheets. They allow you to assign values to a name or identifier, which can then be referenced in different parts of your code. 
+Functions - Functions are a powerful feature that allows you to perform calculations, manipulate values, and create reusable code snippets
+objects
+
+The "AND" function takes multiple arguments and returns true if all the arguments are truthy, and false otherwise. 
+
+//Example:
+
+$condition1: true;
+$condition2: false;
+$condition3: true;
+
+.my-element {
+  display: if(and($condition1, $condition2, $condition3), block, none);
+}
+
+mixins - allow you to define styles that can be reused throughout your stylesheet
+Partials
+maps- are data structures that allow you to store key-value pairs, 
+if statements-
+
+maps is SASS can be useful for storing and organising related data, such as color palettes, font families , breakpoints, or any other set of related values that you may need to use throughout your stylesheet.
+
+
+Mixins and functions are very similar, but just remember that function should be used to compute values and return values, mixins should define styles
+
+Operations
+
+Addition, subtraction, division, multiplication.
+
+Operations in Sass are used for performing mathematical calculations and manipulations on values. They allow you to perform arithmetic operations, combine or manipulate values, and create dynamic styles based on calculations.

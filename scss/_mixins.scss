@@ -1,0 +1,21 @@
+// mixins
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background: lighten($primary-color, 100%);
+    color: darken($text-color, 100%);
+  }
+}
+
+@mixin media($device) {
+  @include mediaQuery(device) {
+    @content;
+  }
+}

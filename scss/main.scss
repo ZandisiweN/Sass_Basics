@@ -1,0 +1,52 @@
+@import './resets';
+@import './variables';
+@import './mixins';
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@function mediaQuery($mediaQuery) {
+  @return map-get($mediaQueries, $mediaQuery);
+}
+
+// usecase
+body {
+  background: $primary-color;
+  color: $text-color;
+}
+
+.main {
+  @include flexCenter(row);
+  border: 1px solid #f00;
+  width: 80% - 40%;
+  margin: 0 auto;
+
+  #{&}_paragraph1 {
+    border: 1px solid #00f;
+    font-weight: weight(bold);
+
+    &:hover {
+      color: pink;
+      cursor: pointer;
+    }
+  }
+
+  #{&}_paragraph2 {
+    @extend .main_paragraph1;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+.light {
+  @include theme($light-theme: false);
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
